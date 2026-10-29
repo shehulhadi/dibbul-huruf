@@ -121,7 +121,7 @@ footer b{display:block;margin-top:6px;font:700 15px var(--serif);letter-spacing:
   var grid=document.getElementById("grid"), who=document.getElementById("who"), pill=document.getElementById("pill");
   var btns=document.querySelectorAll(".dock button");
   var sa=document.getElementById("s-abjad"), sl=document.getElementById("s-alpha");
-  function list(){return sort==="abjad"?L:alphaOrder.map(function(s){return L.filter(function(x){return x[2]===s})[0]})}
+  function list(){return sort==="abjad"?L.slice().reverse():alphaOrder.map(function(s){return L.filter(function(x){return x[2]===s})[0]})}
   function render(){
     who.textContent=names[gender];
     grid.innerHTML=list().map(function(x,i){return '<li><a class="letter" style="--i:'+i+'" href="pages/'+x[2]+'.html?jinsi='+gender+'" aria-label="'+x[1]+'"><span class="v">'+x[3]+'</span><span class="g" lang="ar" dir="rtl">'+x[0]+'</span><span class="n">'+x[1]+'</span></a></li>'}).join("");
