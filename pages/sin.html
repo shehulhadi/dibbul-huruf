@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Harufi س</title>
+
+<style>
+  html,body{
+    height:100%;
+    margin:0;
+    background:#ffffff;
+    font-family: "Noto Naskh Arabic","Scheherazade New","Amiri",sans-serif;
+    direction: rtl;
+    text-align: left;
+    padding: 20px;
+    line-height: 1.8;
+  }
+
+  .container{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1{
+    font-size: 36px;
+    color: #111;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .section{
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-right: 4px solid #222;
+  }
+
+  .section-title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #c41e3a;
+    margin-bottom: 15px;
+  }
+
+  .subsection-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c5282;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .content{
+    font-size: 18px;
+    color: #333;
+    line-height: 2;
+  }
+
+  .magic-squares{
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .magic-square table{
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .magic-square td{
+    width: 70px;
+    height: 70px;
+    border: 2px solid #222;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .back-link{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+
+  .back-link:hover{
+    background: #444;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  @media (max-width: 600px){
+    html,body{
+      padding: 15px;
+    }
+    
+    h1{
+      font-size: 28px;
+    }
+    
+    .section-title{
+      font-size: 24px;
+    }
+    
+    .subsection-title{
+      font-size: 20px;
+    }
+    
+    .content{
+      font-size: 16px;
+    }
+
+    .magic-square td{
+      width: 55px;
+      height: 55px;
+      font-size: 20px;
+    }
+  }
+</style>
+
+<script>
+  window.onload = function(){
+    // Get selection from localStorage
+    const selection = localStorage.getItem("selection");
+    
+    // Hide all sections initially
+    document.getElementById("maza-section").classList.add("hidden");
+    document.getElementById("mata-section").classList.add("hidden");
+    document.getElementById("jariri-section").classList.add("hidden");
+    
+    // Show only the selected section
+    if(selection === "maza"){
+      document.getElementById("maza-section").classList.remove("hidden");
+    } else if(selection === "mata"){
+      document.getElementById("mata-section").classList.remove("hidden");
+    } else if(selection === "jariri"){
+      document.getElementById("jariri-section").classList.remove("hidden");
+    } else {
+      // If no selection, show all sections
+      document.getElementById("maza-section").classList.remove("hidden");
+      document.getElementById("mata-section").classList.remove("hidden");
+      document.getElementById("jariri-section").classList.remove("hidden");
+    }
+  }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Harufi<br> س</h1>
+
+  <!-- Maza Section -->
+  <div id="maza-section" class="section">
+    <div class="section-title">Maza</div>
+    
+    <div class="subsection-title">Sanadin Cuta</div>
+    <div class="content">
+      Ya sami bugun ido daga mutumin da yake da ido fatsi-fatsi da leɓe mai faɗi.
+    </div>
+    
+    <div class="subsection-title">Alama</div>
+    <div class="content">
+      Tafiyar hankali, mantuwa, rashin barci, rashin sha'awa.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta masa ayatul kursi da سورة لم يكن da سورة القدر da سورة قريش, ya rataye su zai warke da izinin Allah.
+    </div>
+  </div>
+
+  <!-- Mata Section -->
+  <div id="mata-section" class="section">
+    <div class="section-title">Mata</div>
+    
+    <div class="subsection-title">(Dalilan Cuta)</div>
+    <div class="content">
+      Ta yi wanka ta fantsama ruwa a kan jama'ar aljanu sai suka tayar mata da rigima a gidan haihuwa da 'ya'ya.
+    </div>
+    
+    <div class="subsection-title">Alamar Cutar</div>
+    <div class="content">
+      Idan ta dauki ciki suna tayar mata da rigima a 'ya'yanta tana kamuwa da tari tana jajaruwa tana shuɗewa tana gushewar hankali tana fitowa har ma tana yin fitsari.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta mata حجاب العهود da حجاب القرناء والتوابع da waɗannan hatimori biyu tare da سورة الجن ta ɗauka kuma a ɗauki mata kwabin dabino hamsin da biyar a ɗaura a binne a bakin ƙofa
+      <br>
+      Ga hatimomi biyun nan:
+    </div>
+
+    <div class="magic-squares">
+      <div class="magic-square">
+        <table>
+          <tr>
+            <td>ج</td>
+            <td>ف</td>
+            <td>ى</td>
+            <td>ط</td>
+          </tr>
+          <tr>
+            <td>ف</td>
+            <td>ى</td>
+            <td>ط</td>
+            <td>ج</td>
+          </tr>
+          <tr>
+            <td>ى</td>
+            <td>ط</td>
+            <td>ج</td>
+            <td>ف</td>
+          </tr>
+          <tr>
+            <td>ط</td>
+            <td>ج</td>
+            <td>ف</td>
+            <td>ى</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="magic-square">
+        <table>
+          <tr>
+            <td>ف</td>
+            <td>ى</td>
+            <td>ط</td>
+            <td>ل</td>
+          </tr>
+          <tr>
+            <td>ل</td>
+            <td>ف</td>
+            <td>ى</td>
+            <td>ط</td>
+          </tr>
+          <tr>
+            <td>ط</td>
+            <td>ل</td>
+            <td>ف</td>
+            <td>ى</td>
+          </tr>
+          <tr>
+            <td>ى</td>
+            <td>ط</td>
+            <td>ل</td>
+            <td>ف</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jariri Section -->
+  <div id="jariri-section" class="section">
+    <div class="section-title">Jariri</div>
+    
+    <div class="subsection-title">( Dalilin Cuta )</div>
+    <div class="content">
+      Mahaifiyarsa ta fita da shi da dare ta wuce bakin ƙofa ko wuri marar mazauna ko murhu sai kare daga karnukan aljanu ya yi masa haushi sai yaron ya firgita.
+    </div>
+    
+    <div class="subsection-title">Alamomi</div>
+    <div class="content">
+      Kururuwa da kuka da tashin hankali da firgita da rawaya da rauni.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta masa takarduna uku a narkar da su a ruwa a shafa masa dukan jikinsa ya sha daga cikinsa, ga abin da za a rubuta a cikin takardun: 'Aylaqish 'Amriyush Tal'alush da Tahatil. A rubuta masa Hijabi kukan yara da Hijabi Qasaba.
+    </div>
+  </div>
+
+  <a href="../index.html" class="back-link">← Koma baya</a>
+</div>
+
+</body>
+</html>

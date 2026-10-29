@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Dibbul Huruf</title>
+
+<style>
+  :root{
+    --count: 28;
+    --step: calc(360deg / var(--count));
+    --radius: 210px;
+    --box-w: 62px;
+    --box-h: 62px;
+    --ring-size: 580px;
+    --bg: #ffffff;
+    --stroke: #222;
+    --font-size-letter: 28px;
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    background:var(--bg);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    font-family: "Noto Naskh Arabic","Scheherazade New","Amiri",sans-serif;
+    direction: rtl;
+    text-align:center;
+  }
+
+  h1{
+    margin-top:25px;
+    font-size:32px;
+    color:#111;
+    font-weight:700;
+  }
+
+  h3{
+    margin-top:10px;
+    font-size:20px;
+    color:#111;
+    font-weight:600;
+  }
+
+  .options{
+    margin:20px 0 30px 0;
+    font-size:20px;
+    text-align:left;
+  }
+
+  .options label{
+    margin:0 15px;
+    cursor:pointer;
+  }
+
+  a{ text-decoration:none; color:inherit; }
+
+  .stage{ width:var(--ring-size); height:var(--ring-size); position:relative; }
+
+  .ring{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    border:6px solid var(--stroke);
+  }
+
+  .slots{ position:absolute; inset:0; }
+
+  .slot{
+    --i: 0;
+    position:absolute;
+    width:var(--box-w);
+    height:var(--box-h);
+    left:calc(50% - var(--box-w)/2);
+    top:calc(50% - var(--box-h)/2);
+    transform:
+      rotate(calc(var(--i)*var(--step)))
+      translateY(calc(-1 * var(--radius)))
+      rotate(calc(-1 * var(--i)*var(--step)));
+  }
+
+  .box{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:var(--font-size-letter);
+    font-weight:700;
+    color:#000;
+  }
+
+  @media (max-width:520px){
+    :root{
+      --ring-size: 360px;
+      --radius: 135px;
+      --box-w: 48px;
+      --box-h: 48px;
+      --font-size-letter: 20px;
+    }
+  }
+</style>
+
+<script>
+function saveSelection(type){
+  localStorage.setItem("selection", type);
+}
+</script>
+
+</head>
+<body>
+
+<h1>Gano cututtuka ga maza, mata da jarirai</h1>
+<h3>Zabi jinsi, sannan a danna farkon suna</h3>
+
+<div class="options">
+  <label>
+    <input type="radio" name="opt" value="maza" onclick="saveSelection('maza')">
+    Maza
+  </label><br>
+  <label>
+    <input type="radio" name="opt" value="mata" onclick="saveSelection('mata')">
+    Mata
+  </label><br>
+  <label>
+    <input type="radio" name="opt" value="jariri" onclick="saveSelection('jariri')">
+    Jariri namiji ko mace
+  </label>
+</div>
+
+<div class="stage">
+  <div class="ring"></div>
+
+  <div class="slots">
+    <div class="slot" style="--i:0"><a href="pages/ghayn.html" class="box letter-link">غ</a></div>
+    <div class="slot" style="--i:1"><a href="pages/zha.html" class="box letter-link">ظ</a></div>
+    <div class="slot" style="--i:2"><a href="pages/dad.html" class="box letter-link">ض</a></div>
+    <div class="slot" style="--i:3"><a href="pages/dhal.html" class="box letter-link">ذ</a></div>
+    <div class="slot" style="--i:4"><a href="pages/kha.html" class="box letter-link">خ</a></div>
+    <div class="slot" style="--i:5"><a href="pages/tha.html" class="box letter-link">ث</a></div>
+    <div class="slot" style="--i:6"><a href="pages/ta2.html" class="box letter-link">ت</a></div>
+    <div class="slot" style="--i:7"><a href="pages/shin.html" class="box letter-link">ش</a></div>
+    <div class="slot" style="--i:8"><a href="pages/ra.html" class="box letter-link">ر</a></div>
+    <div class="slot" style="--i:9"><a href="pages/qaf.html" class="box letter-link">ق</a></div>
+    <div class="slot" style="--i:10"><a href="pages/sad.html" class="box letter-link">ص</a></div>
+    <div class="slot" style="--i:11"><a href="pages/fa.html" class="box letter-link">ف</a></div>
+    <div class="slot" style="--i:12"><a href="pages/ayn.html" class="box letter-link">ع</a></div>
+    <div class="slot" style="--i:13"><a href="pages/sin.html" class="box letter-link">س</a></div>
+    <div class="slot" style="--i:14"><a href="pages/nun.html" class="box letter-link">ن</a></div>
+    <div class="slot" style="--i:15"><a href="pages/mim.html" class="box letter-link">م</a></div>
+    <div class="slot" style="--i:16"><a href="pages/lam.html" class="box letter-link">ل</a></div>
+    <div class="slot" style="--i:17"><a href="pages/kaf.html" class="box letter-link">ك</a></div>
+    <div class="slot" style="--i:18"><a href="pages/ya.html" class="box letter-link">ي</a></div>
+    <div class="slot" style="--i:19"><a href="pages/ta.html" class="box letter-link">ط</a></div>
+    <div class="slot" style="--i:20"><a href="pages/ha2.html" class="box letter-link">ح</a></div>
+    <div class="slot" style="--i:21"><a href="pages/zal.html" class="box letter-link">ز</a></div>
+    <div class="slot" style="--i:22"><a href="pages/waw.html" class="box letter-link">و</a></div>
+    <div class="slot" style="--i:23"><a href="pages/ha.html" class="box letter-link">ه</a></div>
+    <div class="slot" style="--i:24"><a href="pages/dal.html" class="box letter-link">د</a></div>
+    <div class="slot" style="--i:25"><a href="pages/jim.html" class="box letter-link">ج</a></div>
+    <div class="slot" style="--i:26"><a href="pages/ba.html" class="box letter-link">ب</a></div>
+    <div class="slot" style="--i:27"><a href="pages/alif.html" class="box letter-link">ا</a></div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll(".letter-link").forEach(link => {
+  link.addEventListener("click", function(e){
+    const selected = document.querySelector('input[name="opt"]:checked');
+    if (!selected) {
+      e.preventDefault();
+      alert("A fara zabar jinsi kafin a danna harafi.");
+    }
+  });
+});
+</script>
+
+</body>
+</html>

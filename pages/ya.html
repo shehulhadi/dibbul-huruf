@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Harufi ي</title>
+
+<style>
+  html,body{
+    height:100%;
+    margin:0;
+    background:#ffffff;
+    font-family: "Noto Naskh Arabic","Scheherazade New","Amiri",sans-serif;
+    direction: rtl;
+    text-align: left;
+    padding: 20px;
+    line-height: 1.8;
+  }
+
+  .container{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1{
+    font-size: 36px;
+    color: #111;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .section{
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-right: 4px solid #222;
+  }
+
+  .section-title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #c41e3a;
+    margin-bottom: 15px;
+  }
+
+  .subsection-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c5282;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .content{
+    font-size: 18px;
+    color: #333;
+    line-height: 2;
+  }
+
+  .back-link{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+
+  .back-link:hover{
+    background: #444;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  @media (max-width: 600px){
+    html,body{
+      padding: 15px;
+    }
+    
+    h1{
+      font-size: 28px;
+    }
+    
+    .section-title{
+      font-size: 24px;
+    }
+    
+    .subsection-title{
+      font-size: 20px;
+    }
+    
+    .content{
+      font-size: 16px;
+    }
+  }
+</style>
+
+<script>
+  window.onload = function(){
+    // Get selection from localStorage
+    const selection = localStorage.getItem("selection");
+    
+    // Hide all sections initially
+    document.getElementById("maza-section").classList.add("hidden");
+    document.getElementById("mata-section").classList.add("hidden");
+    document.getElementById("jariri-section").classList.add("hidden");
+    
+    // Show only the selected section
+    if(selection === "maza"){
+      document.getElementById("maza-section").classList.remove("hidden");
+    } else if(selection === "mata"){
+      document.getElementById("mata-section").classList.remove("hidden");
+    } else if(selection === "jariri"){
+      document.getElementById("jariri-section").classList.remove("hidden");
+    } else {
+      // If no selection, show all sections
+      document.getElementById("maza-section").classList.remove("hidden");
+      document.getElementById("mata-section").classList.remove("hidden");
+      document.getElementById("jariri-section").classList.remove("hidden");
+    }
+  }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Harufi<br> ي</h1>
+
+  <!-- Maza Section -->
+  <div id="maza-section" class="section">
+    <div class="section-title">Maza</div>
+    
+    <div class="subsection-title">Sanadin Cuta</div>
+    <div class="content">
+      An yi masa sihiri daga Bayahude ko Bakirista.
+    </div>
+    
+    <div class="subsection-title">Alama</div>
+    <div class="content">
+      Ciwon gaɓoɓi da haƙora, raunin yatsotsinsa, ciwon kai.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta masa سورة الم نشرح da daga farkon يس zuwa سلام قولا من رب رحيم da sunayen mala'iku huɗu: جبريل, ميكائيل, إسرافيل, عزرائيل. ayi laya zai warke.
+    </div>
+  </div>
+
+  <!-- Mata Section -->
+  <div id="mata-section" class="section">
+    <div class="section-title">Mata</div>
+    
+    <div class="subsection-title">(Dalilan Cuta)</div>
+    <div class="content">
+      Abokan gaba na mata sun yi mata sihiri sun jefa shi a wurin da aka yashe ko kuma ta fāɗi a wata rana sai mazaunin aljanu ya buge ta.
+    </div>
+    
+    <div class="subsection-title">Alamar Cutar</div>
+    <div class="content">
+      Rauni da kasala da zazzaɓi.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta mata a kan ganyen dabino uku:
+      <br><br>
+      <strong>(A kan na farko):</strong> (الحمى من الجحيم)
+      <br>
+      <strong>(A kan na biyu):</strong> (وحرها من نار الجحيم)
+      <br>
+      <strong>(A kan na uku):</strong> (وأصلها من الشيطان الرجيم)
+      <br><br>
+      Sa'an nan a rubuta a kan takardu uku:
+      <br>
+      <strong>(Na farko):</strong> لا إله إلا الله نارت فاستنارت
+      <br>
+      <strong>(Na biyu):</strong> محمد رسول الله دارت فاستدارت
+      <br>
+      <strong>(Na uku):</strong> بقوة الله ذهبت الحمى وغارت الا يعلم من خلق وهو اللطيف الخبير
+      <br><br>
+      Ta yi turare da su kwanaki uku za ta warke, kuma a rubuta mata laya mai سورة الفاتحة da ayatul kursi da falaki da nasi da الإخلاص da farkon سورة الواقعة har zuwa ﴿عَلَىٰ سُرُرٍ مُّتَقَابِلِينَ﴾ a yi turare da حب الرشاد da kundur da الميعه السائلة kuma a rubuta mata آيات الشفاء a cikin farantin karfe ta sha shi da ruwan rijiya da safe za ta warke da izinin Allah.
+    </div>
+  </div>
+
+  <!-- Jariri Section -->
+  <div id="jariri-section" class="section">
+    <div class="section-title">Jariri</div>
+    
+    <div class="subsection-title">( Dalilin Cuta )</div>
+    <div class="content">
+      Ya fadi daga mahaifiyarsa a wuri marar mazauna ko a bakin ƙofa ko gaban tanda ko murhu, ko ya rusuna a fuskarsa, ko kuma an yi mata maita daga mutane.
+    </div>
+    
+    <div class="subsection-title">Alamomi</div>
+    <div class="content">
+      Tashin hankali da kururuwa dare da rana.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta masa Surah Al-Humazah da Al-'Asr da Quraysh da Al-Falaq da Hirzi Aqtar. A yi hayaƙi da lubban dhakar. A rubuta masa Hijabi Qarina da Tawabi'u da Ayatul Kursi da ayoyin kariya.
+    </div>
+  </div>
+
+  <a href="../index.html" class="back-link">← Koma baya</a>
+</div>
+
+</body>
+</html>

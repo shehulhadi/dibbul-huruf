@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Harufi و</title>
+
+<style>
+  html,body{
+    height:100%;
+    margin:0;
+    background:#ffffff;
+    font-family: "Noto Naskh Arabic","Scheherazade New","Amiri",sans-serif;
+    direction: rtl;
+    text-align: left;
+    padding: 20px;
+    line-height: 1.8;
+  }
+
+  .container{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1{
+    font-size: 36px;
+    color: #111;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .section{
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-right: 4px solid #222;
+  }
+
+  .section-title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #c41e3a;
+    margin-bottom: 15px;
+  }
+
+  .subsection-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c5282;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .content{
+    font-size: 18px;
+    color: #333;
+    line-height: 2;
+  }
+
+  .magic-square{
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .magic-square table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .magic-square td{
+    width: 80px;
+    height: 80px;
+    border: 2px solid #222;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .back-link{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+
+  .back-link:hover{
+    background: #444;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  @media (max-width: 600px){
+    html,body{
+      padding: 15px;
+    }
+    
+    h1{
+      font-size: 28px;
+    }
+    
+    .section-title{
+      font-size: 24px;
+    }
+    
+    .subsection-title{
+      font-size: 20px;
+    }
+    
+    .content{
+      font-size: 16px;
+    }
+
+    .magic-square td{
+      width: 60px;
+      height: 60px;
+      font-size: 20px;
+    }
+  }
+</style>
+
+<script>
+  window.onload = function(){
+    // Get selection from localStorage
+    const selection = localStorage.getItem("selection");
+    
+    // Hide all sections initially
+    document.getElementById("maza-section").classList.add("hidden");
+    document.getElementById("mata-section").classList.add("hidden");
+    document.getElementById("jariri-section").classList.add("hidden");
+    
+    // Show only the selected section
+    if(selection === "maza"){
+      document.getElementById("maza-section").classList.remove("hidden");
+    } else if(selection === "mata"){
+      document.getElementById("mata-section").classList.remove("hidden");
+    } else if(selection === "jariri"){
+      document.getElementById("jariri-section").classList.remove("hidden");
+    } else {
+      // If no selection, show all sections
+      document.getElementById("maza-section").classList.remove("hidden");
+      document.getElementById("mata-section").classList.remove("hidden");
+      document.getElementById("jariri-section").classList.remove("hidden");
+    }
+  }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Harufi<br> و</h1>
+
+  <!-- Maza Section -->
+  <div id="maza-section" class="section">
+    <div class="section-title">Maza</div>
+    
+    <div class="subsection-title">Sanadin Cuta</div>
+    <div class="content">
+      Ya shiga ruwa don yin wanka ba tare da bismillah ba, kuma wannan ranar Lahadi ce, sai iska na ruwan da yake ciki ya buge shi.
+    </div>
+    
+    <div class="subsection-title">Alama</div>
+    <div class="content">
+      Ya haifar masa da ciwon baya da ƙashi, lokaci-lokaci yana zafi lokaci-lokaci yana sanyi.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta masa takarda bakwai, a yi hayaƙi kowace rana da takarda ɗaya. Ga abin da ake rubutu<br> 112263 241222241 11843425 85472<br> A rubuta masa laya mai ayatul kursi da Ayaush-shifa tare da waɗannan haruffa<br> 595351 10498314975111<br> A rubuta masa Munjiyatus-sab'a, kowane surah a takarda ɗaya. Ayi layan wannan khatimi tare da takardu zai warke
+    </div>
+
+    <div class="magic-square">
+      <table>
+        <tr>
+          <td>ب</td>
+          <td>ا</td>
+          <td>ر</td>
+          <td>ى</td>
+        </tr>
+        <tr>
+          <td>ا</td>
+          <td>ر</td>
+          <td>ى</td>
+          <td>ب</td>
+        </tr>
+        <tr>
+          <td>ر</td>
+          <td>ى</td>
+          <td>ب</td>
+          <td>ا</td>
+        </tr>
+        <tr>
+          <td>ى</td>
+          <td>ب</td>
+          <td>ا</td>
+          <td>ر</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Mata Section -->
+  <div id="mata-section" class="section">
+    <div class="section-title">Mata</div>
+    
+    <div class="subsection-title">(Dalilan Cuta)</div>
+    <div class="content">
+      Hassada daga macen da idanuwanta wani irin daban.
+    </div>
+    
+    <div class="subsection-title">Alamar Cutar</div>
+    <div class="content">
+      Raunin ƙarfi da ramewa da rawayar launin fata da rashin barci da ciwace-ciwace da matsanancin haushi.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta mata ayatul kursi da falaki da nasi da Kulhuwa da Hijabul-kufli da Suratul-ƙari'ah da Suratu-nuun gwargwadon tsawonta a yi turare da  Lubban-zakar da Hurmul ta riƙe shi tare da ita - kuma a rubuta mata a kan ganyayen koren gamji bakwai ta yi wanka kowace rana da ɗaya. Ga abin da za a rubuta:
+      <br><br>
+      <strong>(A kan ganyen farko):</strong> كيلخلخ ها يوارق da الفاتحة
+      <br>
+      <strong>(A kan na biyu):</strong> هو الله da farkon Yasin har zuwa Saddan da <br>نون والقلم zuwa ƙarshen Surar يا ليسب
+      <br>
+      <strong>(A kan na uku):</strong> سالسع da وإذ فرقنا بكم البحر
+      <br>
+      <strong>(A kan na huɗu):</strong> فقدس da وننزل من القرآن ما هو شفاء
+      <br>
+      <strong>(A kan na biyar):</strong> شارش إذ يقول لصاحبه لا تحزن Ayar
+      <br>
+      <strong>(A kan na shida):</strong> ورشاد رشياش إنا كفيناك المستهزئين
+      <br>
+      <strong>(A kan na bakwai):</strong> هو الله الذي لا إله إلا هو عالم الغيب والشهادة قيوم قاهر ابطلت عن حاملة كتابي هذا كل عين ونظرة وسحر وجنون وتوقيف وعارض آمين.
+    </div>
+  </div>
+
+  <!-- Jariri Section -->
+  <div id="jariri-section" class="section">
+    <div class="section-title">Jariri</div>
+    
+    <div class="subsection-title">( Dalilin Cuta )</div>
+    <div class="content">
+      Daga Allah da maita na iskokin ƙasa da maita da Qurana'i da Tawabi'u.
+    </div>
+    
+    <div class="subsection-title">Alamomi</div>
+    <div class="content">
+      Waɗannan cututtuka da ciwaye da canjin yanayi da rauni da yawan kuka.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta masa ayoyin warkarwa da ayoyin sauƙakawa da Surah Al-Humazah da Tahatil Saba'a da Hijabi Saba'a Aqfal. A yi hayaƙi da lubban dhakar da harmal, a rataya masa. A rubuta masa Ayatul Kursi a cikin kwano a wankẹ da madarar mahaifiyarsa, ya sha kwana bakwai a jere da safe, zai warke da izinin Allah.
+    </div>
+  </div>
+
+  <a href="../index.html" class="back-link">← Koma baya</a>
+</div>
+
+</body>
+</html>

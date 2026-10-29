@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Harufi ص</title>
+
+<style>
+  html,body{
+    height:100%;
+    margin:0;
+    background:#ffffff;
+    font-family: "Noto Naskh Arabic","Scheherazade New","Amiri",sans-serif;
+    direction: rtl;
+    text-align: left;
+    padding: 20px;
+    line-height: 1.8;
+  }
+
+  .container{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1{
+    font-size: 36px;
+    color: #111;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .section{
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-right: 4px solid #222;
+  }
+
+  .section-title{
+    font-size: 28px;
+    font-weight: 700;
+    color: #c41e3a;
+    margin-bottom: 15px;
+  }
+
+  .subsection-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c5282;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .content{
+    font-size: 18px;
+    color: #333;
+    line-height: 2;
+  }
+
+  .back-link{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+
+  .back-link:hover{
+    background: #444;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  @media (max-width: 600px){
+    html,body{
+      padding: 15px;
+    }
+    
+    h1{
+      font-size: 28px;
+    }
+    
+    .section-title{
+      font-size: 24px;
+    }
+    
+    .subsection-title{
+      font-size: 20px;
+    }
+    
+    .content{
+      font-size: 16px;
+    }
+  }
+</style>
+
+<script>
+  window.onload = function(){
+    // Get selection from localStorage
+    const selection = localStorage.getItem("selection");
+    
+    // Hide all sections initially
+    document.getElementById("maza-section").classList.add("hidden");
+    document.getElementById("mata-section").classList.add("hidden");
+    document.getElementById("jariri-section").classList.add("hidden");
+    
+    // Show only the selected section
+    if(selection === "maza"){
+      document.getElementById("maza-section").classList.remove("hidden");
+    } else if(selection === "mata"){
+      document.getElementById("mata-section").classList.remove("hidden");
+    } else if(selection === "jariri"){
+      document.getElementById("jariri-section").classList.remove("hidden");
+    } else {
+      // If no selection, show all sections
+      document.getElementById("maza-section").classList.remove("hidden");
+      document.getElementById("mata-section").classList.remove("hidden");
+      document.getElementById("jariri-section").classList.remove("hidden");
+    }
+  }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Harufi<br> ص</h1>
+
+  <!-- Maza Section -->
+  <div id="maza-section" class="section">
+    <div class="section-title">Maza</div>
+    
+    <div class="subsection-title">Sanadin Cuta</div>
+    <div class="content">
+      Sihiri ko hurar aljanuranar Alhamis ko ya tashi daga wurin da aka ƙaurace sai wanda yake zaune a wurin ya same shi a kai.
+    </div>
+    
+    <div class="subsection-title">Alama</div>
+    <div class="content">
+      Ciwon zuciya da baya da gwiwa da kafaɗa.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta masa سورة الرحمن da (لو أنزلنا هذا القرآن على جبل) zuwa ƙarshen sura. Idan sihiri ne a rubuta masa آيات إبطال السحر da التهاطيل السبعة da sunayen wata bakwai, ayi laya zai warke da izinin Allah.
+    </div>
+  </div>
+
+  <!-- Mata Section -->
+  <div id="mata-section" class="section">
+    <div class="section-title">Mata</div>
+    
+    <div class="subsection-title">(Dalilan Cuta)</div>
+    <div class="content">
+      Shafuwar iskokin ƙasa da ƙarinan ta.
+    </div>
+    
+    <div class="subsection-title">Alamar Cutar</div>
+    <div class="content">
+      Tana samun saukowar cututtuka masu yawa da ciwon kai da ciwon baya da zuciya.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta mata ayatul kursi da آيات الشفاء da سورة الطارق da سورة الجن da الإخلاص da falaki da nasi da حرز الأقطار da wannan tsari: أع و ذب ك ل م ا ت الله التاما ت ل ق ا ب ج د ه و ز ح ط ي ك ل هـ ن س ع ف ص ث خ ذ ض ظ غ a yi turare da لبان ذكر da jawi da مستكي a rataye a kanta ta yi amfani da سفوف الأصول da شراب التفاح za ta warke da izinin Allah Ta'ala.
+    </div>
+  </div>
+
+  <!-- Jariri Section -->
+  <div id="jariri-section" class="section">
+    <div class="section-title">Jariri</div>
+    
+    <div class="subsection-title">( Dalilin Cuta )</div>
+    <div class="content">
+      An tube shi tsirara ranar Laraba da maita daga mutane (hassada).
+    </div>
+    
+    <div class="subsection-title">Alamomi</div>
+    <div class="content">
+      Tsananin ciwon da canjin jiki da launi da rauni.
+    </div>
+    
+    <div class="subsection-title">Magani</div>
+    <div class="content">
+      A rubuta masa ayoyi bakwai daga farkon Surah An-Nahl da Surah An-Najm da ayoyin warkarwa da Surah At-Tariq da Al-Fatiha da Al-Mu'awwidhatayn (tare da waɗannan haruffa): "Habasa habisun wa hajarun yabisun wa shihabun qabis, Allahumma inna 'aynal 'a'ini 'alayhi fi malihi wa ahabbin nasi ilayhi, far-ji'il basara ila hasir". A yi hayaƙi da barkono da kandar, ayi laya, zai warke da izinin Allah.
+    </div>
+  </div>
+
+  <a href="../index.html" class="back-link">← Koma baya</a>
+</div>
+
+</body>
+</html>
