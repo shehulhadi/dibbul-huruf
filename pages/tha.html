@@ -102,7 +102,10 @@
       document.getElementById("jariri-section").classList.remove("hidden");
     }
   }
-</script></head>
+</script><link rel="manifest" href="/dibbul-huruf/manifest.json">
+<meta name="theme-color" content="#0b3d3b">
+<link rel="icon" href="/dibbul-huruf/icon.svg" type="image/svg+xml">
+</head>
 <body><div class="container">
   <h1>Harufi<br>ث</h1>  <!-- Maza -->  <div id="maza-section" class="section">
     <div class="section-title">Maza</div><div class="subsection-title">Sanadin Cuta</div>
@@ -154,5 +157,6 @@
 
   </div><a href="../index.html" class="back-link">← Koma baya</a>
 
-</div></body>
+</div><script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/dibbul-huruf/sw.js",{scope:"/dibbul-huruf/"}).catch(()=>{}));}</script>
+</body>
 </html>

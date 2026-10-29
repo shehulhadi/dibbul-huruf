@@ -1,0 +1,21 @@
+{
+  "name": "Dibbul Huruf — Gano Cututtuka",
+  "short_name": "Dibbul Huruf",
+  "description": "Gano cututtuka ga maza, mata da jarirai ta haruffan Larabci.",
+  "lang": "ha",
+  "dir": "rtl",
+  "start_url": "/dibbul-huruf/",
+  "scope": "/dibbul-huruf/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d3b",
+  "icons": [
+    {
+      "src": "/dibbul-huruf/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

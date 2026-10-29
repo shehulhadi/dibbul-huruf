@@ -110,6 +110,9 @@ function saveSelection(type){
 }
 </script>
 
+<link rel="manifest" href="/dibbul-huruf/manifest.json">
+<meta name="theme-color" content="#0b3d3b">
+<link rel="icon" href="/dibbul-huruf/icon.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -178,5 +181,6 @@ document.querySelectorAll(".letter-link").forEach(link => {
 });
 </script>
 
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/dibbul-huruf/sw.js",{scope:"/dibbul-huruf/"}).catch(()=>{}));}</script>
 </body>
 </html>
