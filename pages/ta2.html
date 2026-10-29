@@ -86,7 +86,7 @@
   }
 </style><script>
   window.onload = function(){
-    const selection = localStorage.getItem("selection");
+    const _p=new URLSearchParams(location.search).get("jinsi");const selection=_p||localStorage.getItem("dh_g")||localStorage.getItem("selection");
 
     document.getElementById("maza-section").classList.add("hidden");
     document.getElementById("mata-section").classList.add("hidden");

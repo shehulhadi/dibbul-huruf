@@ -135,7 +135,7 @@
 <script>
   window.onload = function(){
     // Get selection from localStorage
-    const selection = localStorage.getItem("selection");
+    const _p=new URLSearchParams(location.search).get("jinsi");const selection=_p||localStorage.getItem("dh_g")||localStorage.getItem("selection");
     
     // Hide all sections initially
     document.getElementById("maza-section").classList.add("hidden");

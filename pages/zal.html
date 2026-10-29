@@ -104,6 +104,26 @@
 <link rel="manifest" href="/dibbul-huruf/manifest.json">
 <meta name="theme-color" content="#0b3d3b">
 <link rel="icon" href="/dibbul-huruf/icon.svg" type="image/svg+xml">
+<script>
+  window.onload = function(){
+    const _p=new URLSearchParams(location.search).get("jinsi");
+    const selection=_p||localStorage.getItem("dh_g")||localStorage.getItem("selection");
+    document.getElementById("maza-section").classList.add("hidden");
+    document.getElementById("mata-section").classList.add("hidden");
+    document.getElementById("jariri-section").classList.add("hidden");
+    if(selection === "maza"){
+      document.getElementById("maza-section").classList.remove("hidden");
+    } else if(selection === "mata"){
+      document.getElementById("mata-section").classList.remove("hidden");
+    } else if(selection === "jariri"){
+      document.getElementById("jariri-section").classList.remove("hidden");
+    } else {
+      document.getElementById("maza-section").classList.remove("hidden");
+      document.getElementById("mata-section").classList.remove("hidden");
+      document.getElementById("jariri-section").classList.remove("hidden");
+    }
+  }
+</script>
 </head>
 <body>
 
