@@ -6,128 +6,110 @@
 <title>Harufi غ</title>
 
 <style>
-  html,body{
-    height:100%;
-    margin:0;
-    background:#ffffff;
-    font-family: "Noto Naskh Arabic","Scheherazade New","Amiri",sans-serif;
-    direction: rtl;
-    text-align: left;
-    padding: 20px;
-    line-height: 1.8;
+:root{
+  color-scheme:dark;
+  --bg:#050f0c; --bg2:#0a1c16; --card:rgba(255,255,255,.035); --card-hi:rgba(255,255,255,.07);
+  --ink:#f2eedd; --muted:#8fa79b; --hair:rgba(214,176,92,.22); --hair-hi:rgba(214,176,92,.6);
+  --gold-1:#f3dc9b; --gold-2:#d4a944; --gold-3:#9c7326;
+  --foil:linear-gradient(135deg,var(--gold-1) 0%,var(--gold-2) 45%,var(--gold-3) 70%,var(--gold-1) 100%);
+  --ar:"Amiri","Scheherazade New","Noto Naskh Arabic","Traditional Arabic",serif;
+  --serif:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:light){
+  :root{
+    color-scheme:light;
+    --bg:#f7f2e4; --bg2:#efe6cd; --card:rgba(255,255,255,.7); --card-hi:#fff;
+    --ink:#10231d; --muted:#5f7167; --hair:rgba(156,115,38,.3); --hair-hi:rgba(156,115,38,.75);
+    --gold-1:#c9a043; --gold-2:#a37a24; --gold-3:#7d5a14;
   }
-
-  .container{
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  h1{
-    font-size: 36px;
-    color: #111;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .section{
-    margin-bottom: 40px;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    border-right: 4px solid #222;
-  }
-
-  .section-title{
-    font-size: 28px;
-    font-weight: 700;
-    color: #c41e3a;
-    margin-bottom: 15px;
-  }
-
-  .subsection-title{
-    font-size: 22px;
-    font-weight: 700;
-    color: #2c5282;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .content{
-    font-size: 18px;
-    color: #333;
-    line-height: 2;
-  }
-
-  .disclaimer{
-    margin-top: 50px;
-    padding: 25px;
-    background: #fff3cd;
-    border-right: 4px solid #ffc107;
-    border-radius: 8px;
-  }
-
-  .disclaimer-title{
-    font-size: 24px;
-    font-weight: 700;
-    color: #856404;
-    margin-bottom: 15px;
-  }
-
-  .disclaimer-content{
-    font-size: 18px;
-    color: #856404;
-    line-height: 2;
-  }
-
-  .back-link{
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 24px;
-    background: #222;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 18px;
-  }
-
-  .back-link:hover{
-    background: #444;
-  }
-
-  .hidden{
-    display: none;
-  }
-
-  @media (max-width: 600px){
-    html,body{
-      padding: 15px;
-    }
-    
-    h1{
-      font-size: 28px;
-    }
-    
-    .section-title{
-      font-size: 24px;
-    }
-    
-    .subsection-title{
-      font-size: 20px;
-    }
-    
-    .content{
-      font-size: 16px;
-    }
-
-    .disclaimer-title{
-      font-size: 20px;
-    }
-
-    .disclaimer-content{
-      font-size: 16px;
-    }
-  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;min-height:100dvh;font-family:var(--sans);color:var(--ink);
+  background:var(--bg);direction:rtl;text-align:left;line-height:1.8;
+  padding:calc(env(safe-area-inset-top) + 20px) 18px calc(env(safe-area-inset-bottom) + 30px);
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(70% 45% at 85% -5%,rgba(15,107,82,.55),transparent 65%),
+    radial-gradient(60% 40% at 0% 30%,rgba(212,169,68,.10),transparent 60%),
+    linear-gradient(180deg,var(--bg2),var(--bg) 55%);
+}
+.container{max-width:720px;margin:0 auto}
+.letter-head{text-align:center;margin:0 0 30px}
+.letter-head .eyebrow{
+  font:600 11px var(--sans);letter-spacing:.34em;text-transform:uppercase;
+  color:var(--muted);display:inline-flex;align-items:center;gap:12px;
+}
+.letter-head .eyebrow::before,.letter-head .eyebrow::after{
+  content:"";width:26px;height:1px;background:var(--hair-hi);
+}
+.letter-glyph{
+  font-family:var(--ar);font-weight:700;
+  font-size:clamp(72px,22vw,110px);line-height:1.05;
+  margin:10px 0 6px;
+  background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:220% 100%;
+  filter:drop-shadow(0 6px 22px rgba(212,169,68,.28));
+}
+.section{
+  margin-bottom:22px;padding:22px 20px;border-radius:20px;
+  background:linear-gradient(160deg,var(--card-hi),var(--card));
+  border:1px solid var(--hair);
+  box-shadow:0 12px 30px -16px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.06);
+}
+.section-title{
+  display:inline-block;
+  font:700 13px var(--sans);letter-spacing:.28em;text-transform:uppercase;
+  color:#1a1405;padding:5px 14px;border-radius:999px;
+  background:var(--foil);margin-bottom:16px;
+  box-shadow:0 6px 14px -6px rgba(212,169,68,.6);
+}
+.subsection-title{
+  font-family:var(--serif);font-weight:700;
+  font-size:20px;color:var(--gold-1);
+  margin:18px 0 8px;
+}
+.content{font-size:16px;line-height:1.95;color:var(--ink);text-align:left}
+.content strong{color:var(--gold-1)}
+.magic-squares{margin:20px 0;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.magic-square{margin:0}
+.magic-square table{
+  border-collapse:collapse;background:rgba(0,0,0,.25);
+  box-shadow:0 6px 20px -6px rgba(0,0,0,.6);
+  border:1px solid var(--hair-hi);
+}
+.magic-square td{
+  width:60px;height:60px;border:1px solid var(--hair-hi);
+  text-align:center;vertical-align:middle;
+  font:700 22px var(--ar);color:var(--gold-1);
+}
+.disclaimer{
+  margin-top:30px;padding:20px;border-radius:18px;
+  background:rgba(212,169,68,.08);border:1px solid var(--hair-hi);
+}
+.disclaimer-title{
+  font-family:var(--serif);font-weight:700;font-size:19px;color:var(--gold-1);margin-bottom:10px;
+}
+.disclaimer-content{font-size:15px;line-height:1.9;color:var(--ink);text-align:left}
+.back-link{
+  display:block;margin:32px auto 0;padding:14px 24px;
+  text-align:center;text-decoration:none;
+  color:#1a1405;font:700 13px var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  background:var(--foil);border-radius:999px;max-width:260px;
+  box-shadow:0 10px 24px -8px rgba(212,169,68,.6);
+}
+.hidden{display:none}
+@media (max-width:600px){
+  .section{padding:18px 16px}
+  .subsection-title{font-size:18px}
+  .content{font-size:15px}
+  .magic-square td{width:50px;height:50px;font-size:19px}
+}
 </style>
 
 <script>
@@ -157,13 +139,13 @@
 </script>
 
 <link rel="manifest" href="/dibbul-huruf/manifest.json">
-<meta name="theme-color" content="#0b3d3b">
+<meta name="theme-color" content="#050f0c">
 <link rel="icon" href="/dibbul-huruf/icon.svg" type="image/svg+xml">
 </head>
 <body>
 
 <div class="container">
-  <h1>Harufi<br> غ</h1>
+  <header class="letter-head"><div class="eyebrow">Dibbul Huruf · Harufi</div><div class="letter-glyph" lang="ar">غ</div></header>
 
   <!-- Maza Section -->
   <div id="maza-section" class="section">
